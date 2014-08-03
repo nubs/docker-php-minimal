@@ -94,3 +94,195 @@ php550build:
     - "php-5.5.0/php:/package"
 php550:
   build: "php-5.5.0"
+php5431build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.31/php:/package"
+php5431:
+  build: "php-5.4.31"
+php5430build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.30/php:/package"
+php5430:
+  build: "php-5.4.30"
+php5429build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.29/php:/package"
+php5429:
+  build: "php-5.4.29"
+php5428build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.28/php:/package"
+php5428:
+  build: "php-5.4.28"
+php5427build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.27/php:/package"
+php5427:
+  build: "php-5.4.27"
+php5426build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.26/php:/package"
+php5426:
+  build: "php-5.4.26"
+php5425build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.25/php:/package"
+php5425:
+  build: "php-5.4.25"
+php5424build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.24/php:/package"
+php5424:
+  build: "php-5.4.24"
+php5423build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.23/php:/package"
+php5423:
+  build: "php-5.4.23"
+php5422build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.22/php:/package"
+php5422:
+  build: "php-5.4.22"
+php5421build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.21/php:/package"
+php5421:
+  build: "php-5.4.21"
+php5420build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.20/php:/package"
+php5420:
+  build: "php-5.4.20"
+php5419build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.19/php:/package"
+php5419:
+  build: "php-5.4.19"
+php5418build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.18/php:/package"
+php5418:
+  build: "php-5.4.18"
+php5417build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.17/php:/package"
+php5417:
+  build: "php-5.4.17"
+php5416build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.16/php:/package"
+php5416:
+  build: "php-5.4.16"
+php5415build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.15/php:/package"
+php5415:
+  build: "php-5.4.15"
+php5414build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.14/php:/package"
+php5414:
+  build: "php-5.4.14"
+php5413build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.13/php:/package"
+php5413:
+  build: "php-5.4.13"
+php5412build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.12/php:/package"
+php5412:
+  build: "php-5.4.12"
+php5411build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.11/php:/package"
+php5411:
+  build: "php-5.4.11"
+php5410build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.10/php:/package"
+php5410:
+  build: "php-5.4.10"
+php549build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.9/php:/package"
+php549:
+  build: "php-5.4.9"
+php548build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.8/php:/package"
+php548:
+  build: "php-5.4.8"
+php547build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.7/php:/package"
+php547:
+  build: "php-5.4.7"
+php546build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.6/php:/package"
+php546:
+  build: "php-5.4.6"
+php545build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.5/php:/package"
+php545:
+  build: "php-5.4.5"
+php544build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.4/php:/package"
+php544:
+  build: "php-5.4.4"
+php543build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.3/php:/package"
+php543:
+  build: "php-5.4.3"
+php542build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.2/php:/package"
+php542:
+  build: "php-5.4.2"
+php541build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.1/php:/package"
+php541:
+  build: "php-5.4.1"
+php540build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.0/php:/package"
+php540:
+  build: "php-5.4.0"
