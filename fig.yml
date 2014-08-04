@@ -460,3 +460,111 @@ php530build:
     - "php-5.3.0/php:/package"
 php530:
   build: "php-5.3.0"
+php5217build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.17/php:/package"
+php5217:
+  build: "php-5.2.17"
+php5216build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.16/php:/package"
+php5216:
+  build: "php-5.2.16"
+php5215build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.15/php:/package"
+php5215:
+  build: "php-5.2.15"
+php5214build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.14/php:/package"
+php5214:
+  build: "php-5.2.14"
+php5213build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.13/php:/package"
+php5213:
+  build: "php-5.2.13"
+php5212build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.12/php:/package"
+php5212:
+  build: "php-5.2.12"
+php5211build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.11/php:/package"
+php5211:
+  build: "php-5.2.11"
+php5210build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.10/php:/package"
+php5210:
+  build: "php-5.2.10"
+php529build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.9/php:/package"
+php529:
+  build: "php-5.2.9"
+php528build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.8/php:/package"
+php528:
+  build: "php-5.2.8"
+php527build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.7/php:/package"
+php527:
+  build: "php-5.2.7"
+php526build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.6/php:/package"
+php526:
+  build: "php-5.2.6"
+php525build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.5/php:/package"
+php525:
+  build: "php-5.2.5"
+php524build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.4/php:/package"
+php524:
+  build: "php-5.2.4"
+php523build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.3/php:/package"
+php523:
+  build: "php-5.2.3"
+php522build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.2/php:/package"
+php522:
+  build: "php-5.2.2"
+php521build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.1/php:/package"
+php521:
+  build: "php-5.2.1"
+php520build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.2.0/php:/package"
+php520:
+  build: "php-5.2.0"

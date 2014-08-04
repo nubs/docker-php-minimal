@@ -1,0 +1,52 @@
+# Contributor: Spencer Rinehart <anubis@overthemonkey.com>
+
+pkgname=php
+pkgver=5.2.13
+pkgrel=1
+arch=('i686' 'x86_64')
+license=('PHP')
+url='http://www.php.net'
+makedepends=()
+source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
+md5sums=('cdf95cdc1ebccccce9c96653fd593dd4')
+
+build() {
+    local _phpconfig="--srcdir=../${pkgname}-${pkgver} \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --sysconfdir=/etc/php \
+        --localstatedir=/var \
+        --with-layout=GNU \
+        --with-config-file-path=/etc/php \
+        --with-config-file-scan-dir=/etc/php/conf.d \
+        --disable-rpath \
+        --mandir=/usr/share/man \
+        --disable-all"
+
+    cd ${srcdir}/${pkgname}-${pkgver}
+
+    # Hack around an issue with ./configure not correctly detecting gcc due to
+    # _FORTIFY_SOURCE
+    export CPPFLAGS=
+
+    # php
+    mkdir ${srcdir}/build-php
+    cd ${srcdir}/build-php
+    ln -s ../${pkgname}-${pkgver}/configure
+    ./configure ${_phpconfig}
+    make
+}
+
+package() {
+    pkgdesc='An HTML-embedded scripting language'
+    depends=('pcre' 'bzip2')
+    backup=('etc/php/php.ini')
+
+    cd ${srcdir}/build-php
+    make -j1 INSTALL_ROOT=${pkgdir} install
+    install -D -m644 ${srcdir}/${pkgname}-${pkgver}/php.ini-recommended ${pkgdir}/etc/php/php.ini
+    install -d -m755 ${pkgdir}/etc/php/conf.d/
+
+    # remove empty directory
+    rmdir ${pkgdir}/usr/include/php/include
+}
