@@ -802,3 +802,21 @@ php420build:
     - "php-4.2.0/php:/package"
 php420:
   build: "php-4.2.0"
+php412build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.1.2/php:/package"
+php412:
+  build: "php-4.1.2"
+php411build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.1.1/php:/package"
+php411:
+  build: "php-4.1.1"
+php410build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.1.0/php:/package"
+php410:
+  build: "php-4.1.0"
