@@ -646,3 +646,63 @@ php500build:
     - "php-5.0.0/php:/package"
 php500:
   build: "php-5.0.0"
+php449build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.9/php:/package"
+php449:
+  build: "php-4.4.9"
+php448build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.8/php:/package"
+php448:
+  build: "php-4.4.8"
+php447build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.7/php:/package"
+php447:
+  build: "php-4.4.7"
+php446build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.6/php:/package"
+php446:
+  build: "php-4.4.6"
+php445build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.5/php:/package"
+php445:
+  build: "php-4.4.5"
+php444build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.4/php:/package"
+php444:
+  build: "php-4.4.4"
+php443build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.3/php:/package"
+php443:
+  build: "php-4.4.3"
+php442build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.2/php:/package"
+php442:
+  build: "php-4.4.2"
+php441build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.1/php:/package"
+php441:
+  build: "php-4.4.1"
+php440build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.4.0/php:/package"
+php440:
+  build: "php-4.4.0"
