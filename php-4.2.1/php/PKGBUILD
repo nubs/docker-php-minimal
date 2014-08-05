@@ -1,0 +1,47 @@
+# Contributor: Spencer Rinehart <anubis@overthemonkey.com>
+
+pkgname=php
+pkgver=4.2.1
+pkgrel=1
+arch=('i686' 'x86_64')
+license=('PHP')
+url='http://www.php.net'
+makedepends=()
+source=("http://museum.php.net/php4/php-$pkgver.tar.gz")
+md5sums=('654983196a94ca91c272a00e877b2b40')
+
+build() {
+    local _phpconfig="--prefix=/usr \
+        --sbindir=/usr/bin \
+        --sysconfdir=/etc/php \
+        --localstatedir=/var \
+        --with-layout=GNU \
+        --with-config-file-path=/etc/php \
+        --with-config-file-scan-dir=/etc/php/conf.d \
+	--without-mysql \
+	--without-xml \
+        --disable-rpath \
+        --mandir=/usr/share/man \
+        --disable-all"
+
+    cd ${srcdir}/${pkgname}-${pkgver}
+
+    # Hack around an issue with ./configure not correctly detecting gcc due to
+    # _FORTIFY_SOURCE
+    export CPPFLAGS=
+
+    # php
+    ./configure ${_phpconfig}
+    make
+}
+
+package() {
+    pkgdesc='An HTML-embedded scripting language'
+    depends=('pcre' 'bzip2')
+    backup=('etc/php/php.ini')
+
+    cd ${srcdir}/${pkgname}-${pkgver}
+    make -j1 INSTALL_ROOT=${pkgdir} install
+    install -D -m644 ${srcdir}/${pkgname}-${pkgver}/php.ini-recommended ${pkgdir}/etc/php/php.ini
+    install -d -m755 ${pkgdir}/etc/php/conf.d/
+}

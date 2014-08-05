@@ -778,3 +778,27 @@ php430build:
     - "php-4.3.0/php:/package"
 php430:
   build: "php-4.3.0"
+php423build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.2.3/php:/package"
+php423:
+  build: "php-4.2.3"
+php422build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.2.2/php:/package"
+php422:
+  build: "php-4.2.2"
+php421build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.2.1/php:/package"
+php421:
+  build: "php-4.2.1"
+php420build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.2.0/php:/package"
+php420:
+  build: "php-4.2.0"
