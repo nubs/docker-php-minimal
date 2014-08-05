@@ -1,0 +1,10 @@
+--- php-5.0.3/Zend/zend_modules.h	2004-10-30 15:26:04.000000000 -0400
++++ php-5.0.4/Zend/zend_modules.h	2005-03-15 18:47:12.000000000 -0500
+@@ -23,6 +23,7 @@
+ #define MODULES_H
+ 
+ #include "zend.h"
++#include "zend_compile.h"
+ 
+ #define INIT_FUNC_ARGS		int type, int module_number TSRMLS_DC
+ #define INIT_FUNC_ARGS_PASSTHRU	type, module_number TSRMLS_CC

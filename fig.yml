@@ -610,3 +610,39 @@ php510build:
     - "php-5.1.0/php:/package"
 php510:
   build: "php-5.1.0"
+php505build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.0.5/php:/package"
+php505:
+  build: "php-5.0.5"
+php504build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.0.4/php:/package"
+php504:
+  build: "php-5.0.4"
+php503build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.0.3/php:/package"
+php503:
+  build: "php-5.0.3"
+php502build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.0.2/php:/package"
+php502:
+  build: "php-5.0.2"
+php501build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.0.1/php:/package"
+php501:
+  build: "php-5.0.1"
+php500build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.0.0/php:/package"
+php500:
+  build: "php-5.0.0"
