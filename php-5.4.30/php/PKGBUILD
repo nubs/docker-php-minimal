@@ -22,6 +22,7 @@ build() {
         --with-config-file-scan-dir=/etc/php/conf.d \
         --disable-rpath \
         --mandir=/usr/share/man \
+	--disable-cgi \
         --disable-all"
 
     cd ${srcdir}/${pkgname}-${pkgver}
