@@ -11,7 +11,7 @@ source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
 md5sums=('148730865242a031a638ee3bab4a9d4d')
 
 build() {
-    local _phpconfig="--srcdir=../${pkgname}-${pkgver} \
+    local _phpconfig="
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc/php \
@@ -31,9 +31,6 @@ build() {
     export CPPFLAGS=
 
     # php
-    mkdir ${srcdir}/build-php
-    cd ${srcdir}/build-php
-    ln -s ../${pkgname}-${pkgver}/configure
     ./configure ${_phpconfig}
     make
 }
@@ -43,7 +40,7 @@ package() {
     depends=('pcre' 'bzip2')
     backup=('etc/php/php.ini')
 
-    cd ${srcdir}/build-php
+    cd ${srcdir}/${pkgname}-${pkgver}
     make -j1 INSTALL_ROOT=${pkgdir} install
     install -D -m644 ${srcdir}/${pkgname}-${pkgver}/php.ini-production ${pkgdir}/etc/php/php.ini
     install -d -m755 ${pkgdir}/etc/php/conf.d/
