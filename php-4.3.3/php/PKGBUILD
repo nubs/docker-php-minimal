@@ -4,7 +4,6 @@ pkgrel=1
 arch=('i686' 'x86_64')
 license=('PHP')
 url='http://www.php.net'
-makedepends=()
 source=("http://museum.php.net/php4/php-$pkgver.tar.gz")
 md5sums=('2dc4a4f912148c84be774c31bc66d644')
 

@@ -4,7 +4,6 @@ pkgrel=1
 arch=('i686' 'x86_64')
 license=('PHP')
 url='http://www.php.net'
-makedepends=()
 source=("http://museum.php.net/php5/php-$pkgver.tar.gz" 'zend_modules.patch')
 md5sums=('bf89557056ce34d502e20e24071616c7' '913fc64bde894e49d2cdc35e7c2862ef')
 
