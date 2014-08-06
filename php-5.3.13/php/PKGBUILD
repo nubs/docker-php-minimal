@@ -8,7 +8,13 @@ source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
 md5sums=('179c67ce347680f468edbfc3c425476a')
 
 build() {
-    local _phpconfig="--prefix=/usr \
+    cd ${srcdir}/${pkgname}-${pkgver}
+
+    # Hack around an issue with ./configure not correctly detecting gcc due to
+    # _FORTIFY_SOURCE
+    export CPPFLAGS=
+
+    ./configure --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc/php \
         --localstatedir=/var \
@@ -18,15 +24,7 @@ build() {
         --disable-rpath \
         --mandir=/usr/share/man \
         --disable-cgi \
-        --disable-all"
-
-    cd ${srcdir}/${pkgname}-${pkgver}
-
-    # Hack around an issue with ./configure not correctly detecting gcc due to
-    # _FORTIFY_SOURCE
-    export CPPFLAGS=
-
-    ./configure ${_phpconfig}
+        --disable-all
     make
 }
 

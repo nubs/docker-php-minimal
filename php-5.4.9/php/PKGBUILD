@@ -8,7 +8,9 @@ source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
 md5sums=('e1ac28e1cf20738f0aeeba8261aa4537')
 
 build() {
-    local _phpconfig="--config-cache \
+    cd ${srcdir}/${pkgname}-${pkgver}
+
+    ./configure --config-cache \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc/php \
@@ -19,11 +21,7 @@ build() {
         --disable-rpath \
         --mandir=/usr/share/man \
         --disable-cgi \
-        --disable-all"
-
-    cd ${srcdir}/${pkgname}-${pkgver}
-
-    ./configure ${_phpconfig}
+        --disable-all
     make
 }
 

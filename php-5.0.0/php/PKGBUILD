@@ -8,18 +8,6 @@ source=("http://museum.php.net/php5/php-$pkgver.tar.gz" 'zend_modules.patch')
 md5sums=('d9df0d177fa62091a486f0e5cb5aaaca' '913fc64bde894e49d2cdc35e7c2862ef')
 
 build() {
-    local _phpconfig="--prefix=/usr \
-        --sbindir=/usr/bin \
-        --sysconfdir=/etc/php \
-        --localstatedir=/var \
-        --with-layout=GNU \
-        --with-config-file-path=/etc/php \
-        --with-config-file-scan-dir=/etc/php/conf.d \
-        --disable-rpath \
-        --mandir=/usr/share/man \
-        --disable-cgi \
-        --disable-all"
-
     cd ${srcdir}/${pkgname}-${pkgver}
 
     # Related to https://github.com/php/php-src/commit/de9206a9e9ff1ca95773d9812a986be778373467
@@ -29,7 +17,17 @@ build() {
     # _FORTIFY_SOURCE
     export CPPFLAGS=
 
-    ./configure ${_phpconfig}
+    ./configure --prefix=/usr \
+        --sbindir=/usr/bin \
+        --sysconfdir=/etc/php \
+        --localstatedir=/var \
+        --with-layout=GNU \
+        --with-config-file-path=/etc/php \
+        --with-config-file-scan-dir=/etc/php/conf.d \
+        --disable-rpath \
+        --mandir=/usr/share/man \
+        --disable-cgi \
+        --disable-all
     make
 }
 

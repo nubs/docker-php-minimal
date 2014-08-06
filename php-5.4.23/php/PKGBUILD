@@ -8,7 +8,9 @@ source=("http://www.php.net/distributions/php-$pkgver.tar.gz")
 md5sums=('5f75398b736548c7355fea199ea5c987')
 
 build() {
-    local _phpconfig="--config-cache \
+    cd ${srcdir}/${pkgname}-${pkgver}
+
+    ./configure --config-cache \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc/php \
@@ -19,11 +21,7 @@ build() {
         --disable-rpath \
         --mandir=/usr/share/man \
         --disable-cgi \
-        --disable-all"
-
-    cd ${srcdir}/${pkgname}-${pkgver}
-
-    ./configure ${_phpconfig}
+        --disable-all
     make
 }
 
