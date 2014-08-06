@@ -8,7 +8,7 @@ source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
 md5sums=('88a2b00047bc53afbbbdf10ebe28a57e')
 
 build() {
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${pkgname}-${pkgver}
 
     # Hack around an issue with ./configure not correctly detecting gcc due to
     # _FORTIFY_SOURCE
@@ -33,9 +33,9 @@ package() {
     depends=('pcre' 'bzip2')
     backup=('etc/php/php.ini')
 
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${pkgname}-${pkgver}
     make -j1 INSTALL_ROOT=${pkgdir} install
-    install -D -m644 ${srcdir}/${pkgname}-${pkgver}/php.ini-production ${pkgdir}/etc/php/php.ini
+    install -D -m644 ${pkgname}-${pkgver}/php.ini-production ${pkgdir}/etc/php/php.ini
     install -d -m755 ${pkgdir}/etc/php/conf.d/
 
     # remove empty directory

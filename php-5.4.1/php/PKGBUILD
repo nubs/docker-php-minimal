@@ -8,7 +8,7 @@ source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
 md5sums=('acd566dbd70f855c19d17fc3c0e876a2')
 
 build() {
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${pkgname}-${pkgver}
 
     ./configure --config-cache \
         --prefix=/usr \
@@ -30,9 +30,9 @@ package() {
     depends=('pcre' 'bzip2')
     backup=('etc/php/php.ini')
 
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${pkgname}-${pkgver}
     make -j1 INSTALL_ROOT=${pkgdir} install
-    install -D -m644 ${srcdir}/${pkgname}-${pkgver}/php.ini-production ${pkgdir}/etc/php/php.ini
+    install -D -m644 ${pkgname}-${pkgver}/php.ini-production ${pkgdir}/etc/php/php.ini
     install -d -m755 ${pkgdir}/etc/php/conf.d/
 
     # remove empty directory

@@ -8,7 +8,7 @@ source=("http://museum.php.net/php4/php-$pkgver.tar.gz")
 md5sums=('8433a1d0ce679780990d4813ae094590')
 
 build() {
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${pkgname}-${pkgver}
 
     # Hack around an issue with ./configure not correctly detecting gcc due to
     # _FORTIFY_SOURCE
@@ -33,8 +33,8 @@ package() {
     depends=('pcre' 'bzip2')
     backup=('etc/php/php.ini')
 
-    cd ${srcdir}/${pkgname}-${pkgver}
+    cd ${pkgname}-${pkgver}
     make -j1 INSTALL_ROOT=${pkgdir} install
-    install -D -m644 ${srcdir}/${pkgname}-${pkgver}/php.ini-recommended ${pkgdir}/etc/php/php.ini
+    install -D -m644 ${pkgname}-${pkgver}/php.ini-recommended ${pkgdir}/etc/php/php.ini
     install -d -m755 ${pkgdir}/etc/php/conf.d/
 }
