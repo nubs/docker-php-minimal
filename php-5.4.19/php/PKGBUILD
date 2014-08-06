@@ -1,5 +1,3 @@
-# Contributor: Spencer Rinehart <anubis@overthemonkey.com>
-
 pkgname=php
 pkgver=5.4.19
 pkgrel=1
