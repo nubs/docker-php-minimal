@@ -30,7 +30,6 @@ build() {
     # _FORTIFY_SOURCE
     export CPPFLAGS=
 
-    # php
     ./configure ${_phpconfig}
     make
 }

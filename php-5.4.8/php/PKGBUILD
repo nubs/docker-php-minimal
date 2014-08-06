@@ -26,7 +26,6 @@ build() {
 
     cd ${srcdir}/${pkgname}-${pkgver}
 
-    # php
     ./configure ${_phpconfig}
     make
 }
