@@ -4,7 +4,7 @@ pkgrel=1
 arch=('i686' 'x86_64')
 license=('PHP')
 url='http://www.php.net'
-source=("http://museum.php.net/php5/php-$pkgver.tar.gz")
+source=("http://museum.php.net/php5/php-${pkgver}.tar.gz")
 md5sums=('c9dccc89cc89d39e84f6e6f0cf1c8a65')
 
 build() {
