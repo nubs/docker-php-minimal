@@ -7,11 +7,15 @@ url='http://www.php.net'
 source=("http://museum.php.net/php5/php-${pkgver}.tar.gz" 'zend_modules.patch')
 md5sums=('15c9f5a9848a9e8f32002c6731a31ca8' '913fc64bde894e49d2cdc35e7c2862ef')
 
-build() {
+prepare() {
     cd ${pkgname}-${pkgver}
 
     # Related to https://github.com/php/php-src/commit/de9206a9e9ff1ca95773d9812a986be778373467
     patch -p1 <zend_modules.patch
+}
+
+build() {
+    cd ${pkgname}-${pkgver}
 
     # Hack around an issue with ./configure not correctly detecting gcc due to
     # _FORTIFY_SOURCE
