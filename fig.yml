@@ -838,3 +838,9 @@ php410build:
     - "php-4.1.0/php:/package"
 php410:
   build: "php-4.1.0"
+php406build:
+  image: nubs/arch-build
+  volumes:
+    - "php-4.0.6/php:/package"
+php406:
+  build: "php-4.0.6"
