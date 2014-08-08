@@ -35,7 +35,7 @@ package() {
 
     cd ${pkgname}-${pkgver}
     make -j1 INSTALL_ROOT=${pkgdir} install
-    install -D -m644 ${pkgname}-${pkgver}/php.ini-recommended ${pkgdir}/etc/php/php.ini
+    install -D -m644 php.ini-recommended ${pkgdir}/etc/php/php.ini
     install -d -m755 ${pkgdir}/etc/php/conf.d/
 
     # remove empty directory
