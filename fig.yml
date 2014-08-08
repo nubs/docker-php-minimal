@@ -1,3 +1,21 @@
+php560rc3build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.6.0-rc.3/php:/package"
+php560rc3:
+  build: "php-5.6.0-rc.3"
+php560rc2build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.6.0-rc.2/php:/package"
+php560rc2:
+  build: "php-5.6.0-rc.2"
+php560rc1build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.6.0-rc.1/php:/package"
+php560rc1:
+  build: "php-5.6.0-rc.1"
 php5515build:
   image: nubs/arch-build
   volumes:
