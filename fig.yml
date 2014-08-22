@@ -310,6 +310,12 @@ php540build:
     - "php-5.4.0/php:/package"
 php540:
   build: "php-5.4.0"
+php5329build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.3.29/php:/package"
+php5329:
+  build: "php-5.3.29"
 php5328build:
   image: nubs/arch-build
   volumes:
