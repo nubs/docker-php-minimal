@@ -1,3 +1,9 @@
+php566build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.6.6/php:/package"
+php566:
+  build: "php-5.6.6"
 php565build:
   image: nubs/arch-build
   volumes:
