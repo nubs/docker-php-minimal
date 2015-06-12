@@ -238,6 +238,12 @@ php550build:
     - "php-5.5.0/php:/package"
 php550:
   build: "php-5.5.0"
+php5442build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.4.42/php:/package"
+php5442:
+  build: "php-5.4.42"
 php5441build:
   image: nubs/arch-build
   volumes:
