@@ -748,12 +748,6 @@ php528build:
     - "php-5.2.8/php:/package"
 php528:
   build: "php-5.2.8"
-php527build:
-  image: nubs/arch-build
-  volumes:
-    - "php-5.2.7/php:/package"
-php527:
-  build: "php-5.2.7"
 php526build:
   image: nubs/arch-build
   volumes:
