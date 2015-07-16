@@ -1,3 +1,9 @@
+php700beta1build:
+  image: nubs/arch-build
+  volumes:
+    - "php-7.0.0-beta.1/php:/package"
+php700beta1:
+  build: "php-7.0.0-beta.1"
 php700alpha2build:
   image: nubs/arch-build
   volumes:
