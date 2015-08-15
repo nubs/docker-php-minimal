@@ -124,6 +124,12 @@ php560rc1build:
     - "php-5.6.0-rc.1/php:/package"
 php560rc1:
   build: "php-5.6.0-rc.1"
+php5528build:
+  image: nubs/arch-build
+  volumes:
+    - "php-5.5.28/php:/package"
+php5528:
+  build: "php-5.5.28"
 php5527build:
   image: nubs/arch-build
   volumes:
