@@ -1,3 +1,9 @@
+php700rc5build:
+  image: nubs/arch-build
+  volumes:
+    - "php-7.0.0-rc.5/php:/package"
+php700rc5:
+  build: "php-7.0.0-rc.5"
 php700rc4build:
   image: nubs/arch-build
   volumes:
