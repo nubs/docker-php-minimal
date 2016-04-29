@@ -112,6 +112,12 @@ php700alpha1build:
     - "./php-7.0.0-alpha.1/php:/package"
 php700alpha1:
   build: "php-7.0.0-alpha.1"
+php5621build:
+  image: nubs/arch-build
+  volumes:
+    - "./php-5.6.21/php:/package"
+php5621:
+  build: "php-5.6.21"
 php5620build:
   image: nubs/arch-build
   volumes:
