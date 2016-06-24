@@ -47,6 +47,17 @@ docker-compose run php560build
 docker-compose run php560 php -i
 ```
 
+## Permissions
+Because the container runs as a non-root user, you may run into permission
+problems when using volume mounts to your host.  The build user used in the
+container is uid/gid 1000, so you may need to provide write access to that
+user to any files/directories that need to be written to.  For example:
+
+```bash
+chgrp 1000 .
+chmod g+w .
+```
+
 ## License
 docker-php-minimal is licensed under the MIT license.  See [LICENSE](LICENSE)
 for the full license text.
