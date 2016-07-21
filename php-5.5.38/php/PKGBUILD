@@ -1,0 +1,40 @@
+pkgname=php
+pkgver=5.5.38
+pkgrel=1
+arch=('i686' 'x86_64')
+license=('PHP')
+url='http://www.php.net'
+source=("http://www.php.net/distributions/php-${pkgver}.tar.gz")
+md5sums=('c2545f7164f8f8b2187fb404f11ceb35')
+
+build() {
+    cd ${pkgname}-${pkgver}
+
+    ./configure --config-cache \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --sysconfdir=/etc/php \
+        --localstatedir=/var \
+        --with-layout=GNU \
+        --with-config-file-path=/etc/php \
+        --with-config-file-scan-dir=/etc/php/conf.d \
+        --disable-rpath \
+        --mandir=/usr/share/man \
+        --disable-cgi \
+        --disable-all
+    make
+}
+
+package() {
+    pkgdesc='An HTML-embedded scripting language'
+    depends=('pcre' 'bzip2')
+    backup=('etc/php/php.ini')
+
+    cd ${pkgname}-${pkgver}
+    make -j1 INSTALL_ROOT=${pkgdir} install
+    install -D -m644 php.ini-production ${pkgdir}/etc/php/php.ini
+    install -d -m755 ${pkgdir}/etc/php/conf.d/
+
+    # remove empty directory
+    rmdir ${pkgdir}/usr/include/php/include
+}
