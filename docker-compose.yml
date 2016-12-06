@@ -4,6 +4,12 @@ php710build:
     - "./php-7.1.0/php:/package"
 php710:
   build: "php-7.1.0"
+php7013build:
+  image: nubs/arch-build
+  volumes:
+    - "./php-7.0.13/php:/package"
+php7013:
+  build: "php-7.0.13"
 php7012build:
   image: nubs/arch-build
   volumes:
