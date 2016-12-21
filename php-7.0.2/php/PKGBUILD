@@ -37,4 +37,5 @@ package() {
 
     # remove empty directory
     rmdir ${pkgdir}/usr/include/php/include
+    rmdir ${pkgdir}/var/* ${pkgdir}/var
 }

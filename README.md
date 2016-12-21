@@ -19,19 +19,8 @@ execution time, etc.  Most of these restrictions can be easily modified via
 modifying the `php.ini`.
 
 ## Usage
-Building a docker image with the PHP version you need is a two-step process.
-In the first step, you build an archlinux package for PHP inside of a docker
-image based on [nubs/arch-build].
-
-```bash
-docker run --interactive --tty --rm --volume "$(pwd)/php-5.6.0/php:/package" nubs/arch-build
-
-# Using short-options:
-# docker run -i -t --rm -v "$(pwd)/php-5.6.0/php:/package" nubs/arch-build
-```
-
-For the second step you build a docker image with the built PHP package
-installed.  This image will be used to run your code.
+Building a docker image with any PHP version is simple.  For example, to build
+php 5.6.0:
 
 ```bash
 docker build --tag php-5.6.0 php-5.6.0
@@ -43,7 +32,6 @@ Alternatively, if you have docker-compose installed, you can run the above
 steps like this instead:
 
 ```bash
-docker-compose run php560build
 docker-compose run php560 php -i
 ```
 

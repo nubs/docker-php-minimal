@@ -1,11 +1,17 @@
-FROM base/archlinux
+FROM nubs/arch-build
 
 MAINTAINER Spencer Rinehart <anubis@overthemonkey.com>
 
-COPY php/php-5.4.6-1-x86_64.pkg.tar.xz /tmp/php-5.4.6-1-x86_64.pkg.tar.xz
+COPY php/PKGBUILD php/*.patch /package/
 
-RUN pacman --upgrade --noconfirm --noprogressbar /tmp/php-5.4.6-1-x86_64.pkg.tar.xz
+RUN makepkg --force
 
-ADD php.ini /etc/php/php.ini
+USER root
+
+RUN pacman --upgrade --noconfirm --noprogressbar php-*-x86_64.pkg.tar.xz
+
+COPY php.ini /etc/php/php.ini
+
+USER build
 
 CMD ["php"]
