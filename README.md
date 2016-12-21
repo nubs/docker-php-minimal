@@ -10,8 +10,8 @@ follows:
 * The following functions are disabled from running: `system`, `shell_exec`,
   `passthru`, `proc_open`, `popen`, and `ini_set`.
 * Error display is turned off but errors are logged instead.
-* A 1MB memory limit s enforced.
-* URL and file opening disabled.
+* A 1MB memory limit is enforced.
+* URL and file opening is disabled.
 
 This provides a locked down PHP that should be unable to escape and do
 anything nasty on the system, especially if combined with limits on CPU usage,
