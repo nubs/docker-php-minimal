@@ -5,7 +5,7 @@ arch=('i686' 'x86_64')
 license=('PHP')
 url='http://www.php.net'
 source=("http://www.php.net/distributions/php-${pkgver}.tar.gz")
-md5sums=('63185e6efdd4e381c5f2ec1b1e3baf1f')
+md5sums=('63f8d358d651adef906f650175c796b1')
 
 build() {
     cd ${pkgname}-${pkgver}
