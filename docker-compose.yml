@@ -1,5 +1,7 @@
 php710:
   build: "php-7.1.0"
+php7017:
+  build: "php-7.0.17"
 php7016:
   build: "php-7.0.16"
 php7015:
