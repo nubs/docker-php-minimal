@@ -28,6 +28,8 @@ php701:
   build: "php-7.0.1"
 php700:
   build: "php-7.0.0"
+php5630:
+  build: "php-5.6.30"
 php5629:
   build: "php-5.6.29"
 php5628:
